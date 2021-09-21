@@ -1,0 +1,8 @@
+Flask
+Flask-JWT-Extended
+Flask-RESTful
+Flask-SqlAlchemy
+passlib
+PyJWT
+SQLAlchemy
+Werkzeug
