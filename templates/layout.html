@@ -37,7 +37,7 @@
             </div>
             {% else %}
             <div class="navbar-nav">
-              <a class="nav-item nav-link">Welcome, {{session.get("email")}}</a>
+              <a class="nav-item nav-link">Welcome, {{ session.get("email") }}</a>
               <button class="nav-item nav-link btn btn-link" onclick="logout()">Log Out</button>
             </div>
             {% endif %}

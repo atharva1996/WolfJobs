@@ -73,12 +73,14 @@ def login():
             if temp['email'] == form.email.data and (bcrypt.checkpw(form.password.data.encode("utf-8"),temp['pwd']) or temp['temp']==form.password.data):
                 flash('You have been logged in!', 'success')
                 session['email'] = temp['email']
+                print(form.type.data)
+                session['login_type'] = form.type.data
                 return redirect(url_for('home'))
             else:
                 flash('Login Unsuccessful. Please check username and password', 'danger')
     else:
         return redirect(url_for('home'))
-    return render_template('login.html', title='Login', form=form)
+    return render_template('login.html', title='Login', form=form,type=form.type.data)
 
 @app.route("/logout",methods=['GET','POST'])
 def logout():

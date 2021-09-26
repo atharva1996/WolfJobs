@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
 {% block content %}
-    {{ session.get('token')}}
+    {{ session.get('email')}}
+    {{ session.get('login_type')}}
 {% endblock content %}

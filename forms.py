@@ -1,5 +1,6 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms.fields.core import SelectField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from apps import App
 
@@ -27,6 +28,7 @@ class LoginForm(FlaskForm):
                         validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     remember = BooleanField('Remember Me')
+    type = SelectField('Login Type',choices=[('Manager',"Manager"),("Applicant","Applicant")])
     submit = SubmitField('Login')
 
 
