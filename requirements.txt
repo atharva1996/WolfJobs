@@ -1,1 +1,4 @@
-
+flask
+flask_mail
+bcrypt
+flask_pymongo
