@@ -1,0 +1,35 @@
+.card-container {
+    margin-top:3% ;
+    perspective: 700px;
+}
+
+.card-flip, .card-container {
+    max-width: 100%;
+    display: grid; grid-template: 1fr / 1fr;
+    grid-template-areas: "frontAndBack";
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+}
+
+.card-flip div {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.back {
+    grid-area: frontAndBack;
+    transform: rotateY(-180deg);
+}
+
+.card-container:hover .card-flip {
+    transform: rotateY(180deg);
+}
+
+.front {
+    grid-area: frontAndBack;
+    background:rgba(175, 173, 173, 0.05)
+}
+
+.card-content{
+    margin-left: 10px;
+}

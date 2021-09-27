@@ -13,23 +13,36 @@
                         </article>
                     {% else %}
                         {% for job in jobs %}
-                            <article class="media content-section">
-                                <div class="media-body">
-                                    <div class="article-metadata">
-                                    <small class="text-muted">{{ job.time_posted }}</small>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12 card-container">
+                                    <div class="card-flip">
+                                        <div class="card front contents">
+                                            <p class="card-content" style="text-align:left; font-size:30px; margin-top:10px;">{{ job.job_title }}</a>
+                                                <span class="card-content text-muted" style="float:right; font-size: 12px; margin-right:5px;">{{ job.time_posted }}</span>
+                                            </p>
+                                            <hr>
+                                            <p class="card-content">{{ job.job_description }}</p>
+                                            <p class="card-content"><b>Location:</b> {{ job.job_location }}</p>
+                                        </div>
+                                        <div class="card back">
+                                            Hello World
+                                        </div>
                                     </div>
-                                    <h2><a class="article-title" href="{{ url_for('jobDetails',job_id = job._id) }}">{{ job.job_title }}</a></h2>
-                                    <p class="article-content">{{ job.job_description }}</p>
-                                    <p class="article-content"><b>Location:</b> {{ job.job_location }}</p>
                                 </div>
-                            </article>
+                            </div>
+                        </div>
+                         
                         {% endfor %}
                     {% endif %}
                 </div>
                 <div class="col-2">
-                    <a href = "{{ url_for('posting') }}">Create new Job</a>
-                    <a href = "{{ url_for('posting') }}">Job Status</a>
-                    <a href = "{{ url_for('posting') }}">Update Profile</a>
+                    <div class="vl"></div>
+                    <ul class="side-bar">
+                        <li class="side-bar-li"><a class="side-bar-link" href = "{{ url_for('posting') }}">Create new Job</a></li>
+                        <li class="side-bar-li"><a class="side-bar-link" href = "{{ url_for('posting') }}">Job Status</a></li>
+                        <li class="side-bar-li"><a class="side-bar-link" href = "{{ url_for('posting') }}">Update Profile</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -45,25 +58,38 @@
                             </div>
                         </article>
                     {% else %}
-                        <h2>Jobs Available to Apply</h2><br>
+                        <h3>Jobs Available</h3><br>
                         {% for job in jobs %}
-                            <article class="media content-section">
-                                <div class="media-body">
-                                    <div class="article-metadata">
-                                    <small class="text-muted">{{ job.time_posted }}</small>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12 card-container">
+                                        <div class="card-flip">
+                                            <div class="card front contents">
+                                                <p class="card-content" style="text-align:left; font-size:30px; margin-top:10px;">{{ job.job_title }}</a>
+                                                <span class="card-content text-muted" style="float:right; font-size: 12px; margin-right:5px;">{{ job.time_posted }}</span>
+                                                </p>
+                                                <hr>
+                                                <p class="card-content">{{ job.job_description }}</p>
+                                                <p class="card-content"><b>Location:</b> {{ job.job_location }}</p>
+                                            </div>
+                                            <div class="card back">
+                                                Hello World
+                                                <a href="{{ url_for('jobDetails',job_id = job._id) }}"></a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <h2><a class="article-title" href="{{ url_for('jobDetails',job_id = job._id) }}">{{ job.job_title }}</a></h2>
-                                    <p class="article-content">{{ job.job_description }}</p>
-                                    <p class="article-content"><b>Location:</b> {{ job.job_location }}</p>
                                 </div>
-                            </article>
+                            </div>
                         {% endfor %}
                     {% endif %}
                 </div>
-                <div class="col-2"><br><br><br><br>
-                    <a href = "{{ url_for('posting') }}">Status</a><br>
-                    <a href = "{{ url_for('posting') }}">Guidelines</a>
-                    <a href = "{{ url_for('posting') }}">Update Profile</a>
+                <div class="col-2">
+                    <div class="vl"></div>
+                    <ul class="side-bar">
+                        <li class="side-bar-li"><a class="side-bar-link" href = "{{ url_for('posting') }}">Status</a></li>
+                        <li class="side-bar-li"><a class="side-bar-link" href = "{{ url_for('posting') }}">Guidelines</a></li>
+                        <li class="side-bar-li"><a class="side-bar-link" href = "{{ url_for('posting') }}">Update Profile</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
