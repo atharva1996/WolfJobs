@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block content %}
+    
+    {% if session.get('login_type') == 'Manager' %}
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    {% if jobs == None %}
+                        <article class="media content-section">
+                            <div class="media-body">
+                                <h2><a class="article-title" href="#">You have not posted any jobs!</a></h2>
+                            </div>
+                        </article>
+                    {% else %}
+                        {% for job in jobs %}
+                            <article class="media content-section">
+                                <div class="media-body">
+                                    <div class="article-metadata">
+                                    <small class="text-muted">{{ job.time_posted }}</small>
+                                    </div>
+                                    <h2><a class="article-title" href="#">{{ job.job_title }}</a></h2>
+                                    <p class="article-content">{{ job.job_description }}</p>
+                                    <p class="article-content"><b>Location:</b> {{ job.job_location }}</p>
+                                </div>
+                            </article>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="col-2">
+                    <a href = "{{ url_for('posting') }}">Create new Job</a>
+                    <a href = "{{ url_for('posting') }}">Job Status</a>
+                    <a href = "{{ url_for('posting') }}">Update Profile</a>
+                </div>
+            </div>
+        </div>
+
+    {% else %}
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    {% if jobs == None %}
+                        <article class="media content-section">
+                            <div class="media-body">
+                                <h2><a class="article-title" href="#">There are no jobs Available!</a></h2>
+                            </div>
+                        </article>
+                    {% else %}
+                        <h2>Jobs Available to Apply</h2><br>
+                        {% for job in jobs %}
+                            <article class="media content-section">
+                                <div class="media-body">
+                                    <div class="article-metadata">
+                                    <small class="text-muted">{{ job.time_posted }}</small>
+                                    </div>
+                                    <h2><a class="article-title" href="#">{{ job.job_title }}</a></h2>
+                                    <p class="article-content">{{ job.job_description }}</p>
+                                    <p class="article-content"><b>Location:</b> {{ job.job_location }}</p>
+                                </div>
+                            </article>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="col-2"><br><br><br><br>
+                    <a href = "{{ url_for('posting') }}">Status</a><br>
+                    <a href = "{{ url_for('posting') }}">Guidelines</a>
+                    <a href = "{{ url_for('posting') }}">Update Profile</a>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock content %}
+

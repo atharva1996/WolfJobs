@@ -73,19 +73,6 @@
                     {% endif %}
                 </div>
                 <div class="form-group">
-                    {{ form.position.label(class="form-control-label") }}
-                    {% if form.position.errors %}
-                        {{ form.position(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.position.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.position(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
-                <div class="form-group">
                     {{ form.skills.label(class="form-control-label") }}
                     {% if form.skills.errors %}
                         {{ form.skills(class="form-control form-control-lg is-invalid") }}
@@ -122,19 +109,6 @@
                         </div>
                     {% else %}
                         {{ form.course_enrolled(class="form-control form-control-lg") }}
-                    {% endif %}
-                </div>
-                <div class="form-group">
-                    {{ form.resume.label(class="form-control-label") }}
-                    {% if form.resume.errors %}
-                        {{ form.resume(class="form-control form-control-lg is-invalid") }}
-                        <div class="invalid-feedback">
-                            {% for error in form.resume.errors %}
-                                <span>{{ error }}</span>
-                            {% endfor %}
-                        </div>
-                    {% else %}
-                        {{ form.resume(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
                 <div class="form-group">
