@@ -18,7 +18,7 @@
                                     <div class="article-metadata">
                                     <small class="text-muted">{{ job.time_posted }}</small>
                                     </div>
-                                    <h2><a class="article-title" href="#">{{ job.job_title }}</a></h2>
+                                    <h2><a class="article-title" href="{{ url_for('jobDetails',job_id = job._id) }}">{{ job.job_title }}</a></h2>
                                     <p class="article-content">{{ job.job_description }}</p>
                                     <p class="article-content"><b>Location:</b> {{ job.job_location }}</p>
                                 </div>
@@ -52,7 +52,7 @@
                                     <div class="article-metadata">
                                     <small class="text-muted">{{ job.time_posted }}</small>
                                     </div>
-                                    <h2><a class="article-title" href="#">{{ job.job_title }}</a></h2>
+                                    <h2><a class="article-title" href="{{ url_for('jobDetails',job_id = job._id) }}">{{ job.job_title }}</a></h2>
                                     <p class="article-content">{{ job.job_description }}</p>
                                     <p class="article-content"><b>Location:</b> {{ job.job_location }}</p>
                                 </div>

@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 from types import MethodDescriptorType
+from bson.objectid import ObjectId
 
 from flask_wtf import form
 from utilities import Utilities
@@ -13,33 +14,18 @@ from forms import ForgotPasswordForm, RegistrationForm, LoginForm, ResetPassword
 import bcrypt
 from apps import App
 from flask_login import LoginManager,login_required
+from bson.objectid import ObjectId
 
 app_object = App()
 app = app_object.app
 mongo = app_object.mongo
 mail = app_object.mail
 
-posts = [
-    {
-        'author': 'Corey Schafer',
-        'title': 'Blog Post 1',
-        'content': 'First post content',
-        'date_posted': 'April 20, 2018'
-    },
-    {
-        'author': 'Jane Doe',
-        'title': 'Blog Post 2',
-        'content': 'Second post content',
-        'date_posted': 'April 21, 2018'
-    }
-]
-
-
 @app.route("/")
 @app.route("/home")
 def home():
     if session.get('email'):
-        return render_template('home.html', posts=posts)
+        return render_template('home.html')
     else:
         return redirect(url_for('login'))
 
@@ -112,6 +98,7 @@ def forgotPassword():
             
     else:
         return redirect(url_for('home'))
+
 
 @app.route("/posting", methods=['GET','POST'])
 def posting():
@@ -195,6 +182,17 @@ def dashboard():
 
         get_jobs = sorted(get_jobs, key = lambda i: i['time_posted'],reverse=True)
         return render_template('dashboard.html',jobs = get_jobs)
+
+
+@app.route("/jobDetails", methods=['GET','POST'])
+def jobDetails():
+    email = session['email']
+    login_type = session["login_type"]
+    job_id = request.args.get("job_id")
+    if login_type=="Applicant":
+        job = mongo.db.jobs.find_one({'_id':ObjectId(job_id)})
+        
+    return "Hi"
 
 
 @app.route("/dummy", methods=['GET'])
