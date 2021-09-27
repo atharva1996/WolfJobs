@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='card.css') }}">
 
     {% if title %}
       <title>WolfJobs - {{ title }}</title>
@@ -18,7 +19,7 @@
 </head>
 <body>
     <header class="site-header">
-      <nav class="navbar navbar-expand-md bg-danger fixed-top">
+      <nav class="navbar navbar-expand-md fixed-top nav-color">
         <div class="container">
           <a class="navbar-brand mr-4 text-white" href="/">WolfJobs</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
