@@ -186,13 +186,15 @@ def dashboard():
 
 @app.route("/jobDetails", methods=['GET','POST'])
 def jobDetails():
+    form = ApplyForm()
     email = session['email']
     login_type = session["login_type"]
     job_id = request.args.get("job_id")
     if login_type=="Applicant":
         job = mongo.db.jobs.find_one({'_id':ObjectId(job_id)})
-        
-    return "Hi"
+        return render_template('job_details.html',job = job, form=form)
+    else:
+        return "Hi"
 
 
 @app.route("/dummy", methods=['GET'])
