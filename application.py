@@ -184,6 +184,7 @@ def dashboard():
         return render_template('dashboard.html',jobs = get_jobs)
 
 
+'''
 @app.route("/jobDetails", methods=['GET','POST'])
 def jobDetails():
     form = ApplyForm()
@@ -193,6 +194,35 @@ def jobDetails():
     if login_type=="Applicant":
         job = mongo.db.jobs.find_one({'_id':ObjectId(job_id)})
         applicant = mongo.db.ath.find_one({'email':email})
+        return render_template('job_details.html',job = job, form=form, applicant=applicant)
+    else:
+        return "Hi"
+
+'''
+@app.route("/jobDetails", methods=['GET','POST'])
+def jobDetails():
+    form = ApplyForm()
+    email = session['email']
+    login_type = session["login_type"]
+    job_id = request.args.get("job_id")
+    job = mongo.db.jobs.find_one({'_id':ObjectId(job_id)})
+    applicant = mongo.db.ath.find_one({'email':email})
+        
+    if form.validate_on_submit():
+            if request.method == 'POST':
+                apply_name = request.form.get('apply_name')
+                email = session['email']
+                apply_phone = request.form.get('apply_phone')
+                apply_address = request.form.get('apply_address')
+                dob = request.form.get('dob')
+                skills = request.form.get('skills')
+                availability = request.form.get('availability')
+                schedule = request.form.get('schedule')
+                id = mongo.db.applier.insert({'job_id':job_id,'email':email,'name':apply_name,'phone':apply_phone,'address':apply_address,'dob':dob,'skills':skills,'availability':availability,'schedule':schedule})
+                mongo.db.jobs.update({'_id':ObjectId(job_id)},{'$push':{'Appliers':session['email']}},upsert=True)
+            flash('Successfully Applied to the job!', 'success')
+            return redirect(url_for('dashboard'))
+    if login_type=="Applicant":
         return render_template('job_details.html',job = job, form=form, applicant=applicant)
     else:
         return "Hi"

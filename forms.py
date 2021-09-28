@@ -74,7 +74,7 @@ class ApplyForm(FlaskForm):
     """
     signature = StringField('Signature (Full Name): ',
                            validators=[DataRequired(), Length(min=2, max=20)])
-    schedule = StringField('Signature (Full Name): ',
+    schedule = StringField('Schedule: ',
                            validators=[DataRequired()])
     submit = SubmitField('APPLY')
 
