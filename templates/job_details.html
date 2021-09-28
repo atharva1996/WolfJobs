@@ -8,31 +8,53 @@
                     <article class="media content-section">
                         <div class="media-body">
                             <div class="article-metadata">
-                            <small class="text-muted">Time Posted:{{ job.time_posted }}</small>
+                            <p>{{job.job_id}}</p>
+                            <small class="text-muted">{{ job.time_posted }}</small>
                             </div>
-                            <h2><a class="article-title">Title: {{ job.job_title }}</a></h2>
+                            <h2><a class="article-title">{{ job.job_title }}</a></h2>
                             <p class="article-content">{{ job.job_description }}</p>
                             <p class="article-content"><b>Location:</b> {{ job.job_location }}</p>
                             <p class="article-content">{{ job.skills }}</p>
-                            <p class="article-content">Schedule: {{ job.schedule }}</p>
+                            <p class="article-content">Schedule: {{ job.schedule }} hours</p>
                             <p class="article-content">Salary: {{ job.salary }}</p>
                             <p class="article-content">Rewards: {{ job.rewards }}</p>
-                            {% for record in applicant %}
-                                <p class="article-content">Applier Name:{{ record.name }}</p>
-                            {% endfor %}
-                            <button type="button" class="btn btn-danger" style="max-width:100px; margin:5px;"><a style="color:white" href="#">Delete Job</a></button>
+                            <details>
+                                <summary>Appliers</summary>
+                                {% for record in applicant %}
+                                    <details style="margin: 5px; background:white;">
+                                        <summary>{{record.name}}</summary>
+                                        <p class="article-content">Email ID: {{record.email}}</p>
+                                        <p class="article-content">Phone: {{record.phone}}</p>
+                                        <p class="article-content">Address: {{record.address}}</p>
+                                        <p class="article-content">Date of Birth: {{record.dob}}</p>
+                                        <p class="article-content">Skills: {{record.skills}}</p>
+                                        <p class="article-content">Availability: {{record.availability}} hours</p>
+                                        <p class="article-content">Schedule: {{record.schedule}}</p>
+                                    </details>
+                                {% endfor %}
+                            </details>
+                            <br>
+                            
+                            <button type="button" class="btn btn-danger" style="max-width:100px; margin:5px;"><a style="color:white" href="{{url_for('deleteJob',job_id=job._id)}}">Delete Job</a></button>
 
                         </div>
                     </article>
                 </div>
                 <div class="col-2">
-                    <a href = "{{ url_for('posting') }}">Create new Job</a><br>
-                    <a href = "{{ url_for('posting') }}">Job Status</a><br>
-                    <a href = "{{ url_for('posting') }}">Update Profile</a>
+                    <div class="vl"></div>
+                    <ul class="side-bar">
+                        <li class="side-bar-li"><a class="side-bar-link" href = "{{ url_for('posting') }}">Create new Job</a></li>
+                        <li class="side-bar-li"><a class="side-bar-link" href = "{{ url_for('posting') }}">Job Status</a></li>
+                        <li class="side-bar-li"><a class="side-bar-link" href = "{{ url_for('posting') }}">Update Profile</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-
+        <div class="container">
+            <div class="col-10">
+                
+            </div>
+        </div>
     {% else %}
         <div class="container">
             <div class="row">

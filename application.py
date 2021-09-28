@@ -226,11 +226,19 @@ def jobDetails():
         return render_template('job_details.html',job = job, form=form, applicant=applicant)
     else:
         applicant = []  
-        applicants = mongo.db.applier.find({'job_id':str(job_id)})
+        print(job_id)
+        applicants = mongo.db.applier.find({'job_id':ObjectId(job_id)})
         for record in applicants:
             applicant.append(record)
+        print(applicant)
         return render_template('job_details.html',job=job,applicant=applicant)
-
+    
+@app.route("/deleteJob", methods=['GET','POST'])
+def deleteJob():
+    job_id = request.args.get("job_id")
+    id = mongo.db.jobs.remove({'_id':ObjectId(job_id)})
+    return redirect(url_for('dashboard'))
+  
 
 
 @app.route("/dummy", methods=['GET'])
