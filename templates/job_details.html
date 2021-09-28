@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-    
+
     {% if session.get('login_type') == 'Manager' %}
         <div class="container">
             <div class="row">
@@ -42,7 +42,8 @@
                         <form method="POST" action="">
                             {{ form.hidden_tag() }}
                             <fieldset class="form-group">
-                                <h2></h2>{{ job.job_title }}</legend>
+                                <h2>{{ job.job_title }}</h2>
+                                <br>
                                 <div class="form-group">
                                     {{ form.apply_name.label(class="form-control-label") }}
                 
@@ -154,10 +155,14 @@
                             </div>
                         </form>
                     </div>
-                <div class="col-2"><br><br><br><br>
-                    <a href = "{{ url_for('posting') }}">Status</a><br>
-                    <a href = "{{ url_for('posting') }}">Guidelines</a>
-                    <a href = "{{ url_for('posting') }}">Update Profile</a>
+                </div>
+                <div class="col-2">
+                <div class="vl"></div>
+                    <ul class="side-bar">
+                        <li class="side-bar-li"><a class="side-bar-link" href = "{{ url_for('posting') }}">Status</a></li>
+                        <li class="side-bar-li"><a class="side-bar-link" href = "{{ url_for('posting') }}">Guidelines</a></li>
+                        <li class="side-bar-li"><a class="side-bar-link" href = "{{ url_for('posting') }}">Update Profile</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

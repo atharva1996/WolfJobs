@@ -26,7 +26,14 @@
                                             <p class="card-content"><b>Location:</b> {{ job.job_location }}</p>
                                         </div>
                                         <div class="card back">
-                                            Hello World
+                                            <p class="card-content" style="text-align:left; font-size:30px; margin-top:10px;">{{ job.job_title }}</a>
+                                                <span class="card-content text-muted" style="float:right; font-size: 12px; margin-right:5px;">{{ job.time_posted }}</span>
+                                            </p>
+                                            <hr>
+                                            <p class="card-content"><b>Skills Required:</b> {{job.skills }}</p>
+                                            <p class="card-content"><b>Schedule: </b> {{ job.schedule }} hours</p>
+                                            <p class="card-content"><b>Salary: </b> {{ job.salary }}</p>
+                                            <p class="card-content"><b>Rewards: </b> {{ job.rewards }} hours</p>
                                         </div>
                                     </div>
                                 </div>
@@ -73,8 +80,15 @@
                                                 <p class="card-content"><b>Location:</b> {{ job.job_location }}</p>
                                             </div>
                                             <div class="card back">
-                                                Hello World
-                                                <a href="{{ url_for('jobDetails',job_id = job._id) }}"></a>
+                                                <p class="card-content" style="text-align:left; font-size:30px; margin-top:10px;">{{ job.job_title }}</a>
+                                                <span class="card-content text-muted" style="float:right; font-size: 12px; margin-right:5px;">{{ job.time_posted }}</span>
+                                            </p>
+                                            <hr>
+                                            <p class="card-content"><b>Skills Required:</b> {{job.skills }}</p>
+                                            <p class="card-content"><b>Schedule: </b> {{ job.schedule }} hours</p>
+                                            <p class="card-content"><b>Salary: </b> {{ job.salary }}</p>
+                                            <p class="card-content"><b>Rewards: </b> {{ job.rewards }} hours</p>
+                                            <button class="btn btn-outline-dark" type="button" style="max-width: 350px; margin:10px;"><a style="color:inherit;" href="{{url_for('jobDetails',job_id = job._id)}}">Apply for this position</a></button>
                                             </div>
                                         </div>
                                     </div>
