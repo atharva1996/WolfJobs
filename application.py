@@ -120,7 +120,7 @@ def posting():
             salary = form.salary.data
             rewards = form.rewards.data
 
-            id = mongo.db.jobs.insert({'email':email,'designation':designation,'job_title':job_title,'job_description':job_description,'time_posted':now,'job_location':job_location,'skills':skills,'schedule':schedule,'salary':salary,'rewards':rewards,'Appliers':[]})
+            id = mongo.db.jobs.insert({'email':email,'designation':designation,'job_title':job_title,'job_description':job_description,'time_posted':now,'job_location':job_location,'skills':skills,'schedule':schedule,'salary':salary,'rewards':rewards,'Appliers':[],'selected':None})
             flash("Job Created!",'success')
             return redirect(url_for('dashboard'))
     else:
@@ -219,7 +219,7 @@ def jobDetails():
                 availability = request.form.get('availability')
                 schedule = request.form.get('schedule')
                 id = mongo.db.applier.insert({'job_id':ObjectId(job_id),'email':email,'name':apply_name,'phone':apply_phone,'address':apply_address,'dob':dob,'skills':skills,'availability':availability,'schedule':schedule})
-                mongo.db.jobs.update({'_id':ObjectId(job_id)},{'$push':{'Appliers':session['email']}},upsert=True)
+                mongo.db.jobs.update({'_id':ObjectId(job_id)},{'$push':{'Appliers':session['email']}})
             flash('Successfully Applied to the job!', 'success')
             return redirect(url_for('dashboard'))
     if login_type=="Applicant":
@@ -239,7 +239,13 @@ def deleteJob():
     id = mongo.db.jobs.remove({'_id':ObjectId(job_id)})
     return redirect(url_for('dashboard'))
   
-
+@app.route("/selectApplicant", methods=['GET','POST'])
+def selectApplicant():
+    job_id = request.args.get("job_id")
+    applicant_id = request.args.get("applicant_id")
+    print(job_id,applicant_id)
+    mongo.db.jobs.update({'_id':ObjectId(job_id)},{'$set': {"selected":applicant_id}})
+    return redirect(url_for('dashboard'))
 
 @app.route("/dummy", methods=['GET'])
 def dummy():

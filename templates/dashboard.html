@@ -90,7 +90,12 @@
                                             <p class="card-content"><b>Schedule: </b> {{ job.schedule }} hours</p>
                                             <p class="card-content"><b>Salary: </b> {{ job.salary }}</p>
                                             <p class="card-content"><b>Rewards: </b> {{ job.rewards }}</p>
-                                            <button class="btn btn-outline-dark" type="button" style="max-width: 350px; margin:10px;"><a style="color:inherit;" href="{{url_for('jobDetails',job_id = job._id)}}">Apply for this position</a></button>
+                                            <p class="card-content"><b>Rewards: </b> {{ job.selected }}</p>
+                                            {% if job.selected is none %}
+                                                <button class="btn btn-outline-dark" type="button" style="max-width: 350px; margin:10px;"><a style="color:inherit;" href="{{url_for('jobDetails',job_id = job._id)}}">Apply for this position</a></button>
+                                            {% else %}
+                                                <p class ="card-content" style="color:green">Applicant already selected!</p>
+                                            {% endif %}
                                             </div>
                                         </div>
                                     </div>

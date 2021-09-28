@@ -18,6 +18,8 @@
                             <p class="article-content">Schedule: {{ job.schedule }} hours</p>
                             <p class="article-content">Salary: {{ job.salary }}</p>
                             <p class="article-content">Rewards: {{ job.rewards }}</p>
+                            
+                            {% if job.selected is none%}
                             <details>
                                 <summary>Appliers</summary>
                                 {% for record in applicant %}
@@ -30,13 +32,16 @@
                                         <p class="article-content">Skills: {{record.skills}}</p>
                                         <p class="article-content">Availability: {{record.availability}} hours</p>
                                         <p class="article-content">Schedule: {{record.schedule}}</p>
+                                        <button type="button" class="btn btn-primary"><a style="color:white" href="{{url_for('selectApplicant',job_id=job._id,applicant_id=record._id)}}">Select Applicant</a></button>
                                     </details>
                                 {% endfor %}
                             </details>
+                            {% else %}
+                                <p style="color:green">Applicant already selected!</p>
+                            {% endif %}
                             <br>
-                            
                             <button type="button" class="btn btn-danger" style="max-width:100px; margin:5px;"><a style="color:white" href="{{url_for('deleteJob',job_id=job._id)}}">Delete Job</a></button>
-
+                            
                         </div>
                     </article>
                 </div>
