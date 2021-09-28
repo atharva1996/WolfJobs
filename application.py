@@ -218,14 +218,19 @@ def jobDetails():
                 skills = request.form.get('skills')
                 availability = request.form.get('availability')
                 schedule = request.form.get('schedule')
-                id = mongo.db.applier.insert({'job_id':job_id,'email':email,'name':apply_name,'phone':apply_phone,'address':apply_address,'dob':dob,'skills':skills,'availability':availability,'schedule':schedule})
+                id = mongo.db.applier.insert({'job_id':ObjectId(job_id),'email':email,'name':apply_name,'phone':apply_phone,'address':apply_address,'dob':dob,'skills':skills,'availability':availability,'schedule':schedule})
                 mongo.db.jobs.update({'_id':ObjectId(job_id)},{'$push':{'Appliers':session['email']}},upsert=True)
             flash('Successfully Applied to the job!', 'success')
             return redirect(url_for('dashboard'))
     if login_type=="Applicant":
         return render_template('job_details.html',job = job, form=form, applicant=applicant)
     else:
-        return "Hi"
+        applicant = []  
+        applicants = mongo.db.applier.find({'job_id':str(job_id)})
+        for record in applicants:
+            applicant.append(record)
+        return render_template('job_details.html',job=job,applicant=applicant)
+
 
 
 @app.route("/dummy", methods=['GET'])
