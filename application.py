@@ -192,7 +192,8 @@ def jobDetails():
     job_id = request.args.get("job_id")
     if login_type=="Applicant":
         job = mongo.db.jobs.find_one({'_id':ObjectId(job_id)})
-        return render_template('job_details.html',job = job, form=form)
+        applicant = mongo.db.ath.find_one({'email':email})
+        return render_template('job_details.html',job = job, form=form, applicant=applicant)
     else:
         return "Hi"
 
