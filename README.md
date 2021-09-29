@@ -22,24 +22,11 @@ Let's say that a Teaching Assistant is going on a vacation and needs a pair of h
 Let's assume the same Teaching Assistant has some free time and want to know if there are any temporary requirements for grading any other course. Thus, He/She can search the jobs in WolfJobs and apply for the same. 
 
 # Tech Stack used for the development of this project
-
- <a href="https://www.mongodb.com" target="_blank"> 
-   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="mongo" width="30" height="30"/>
- </a>
-  <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" target="_blank"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain.svg" alt="js" width="30" height="30"/>
- </a>
- <a href="https://www.python.org" target="_blank"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-plain.svg" alt="python" width="30" height="30"/>
- </a>
- <a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS" target="_blank"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg" alt="css" width="30" height="30"/>
- </a>
  
-  * MongoDB
-  * HTML
-  * Python
-  * CSS
+ <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="python" width="20" height="20"/> Python </br>
+ <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="mongo" width="20" height="20"/> MongoDB </br>
+ <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg" alt="html" width="20" height="20"> CSS3 </br>
+ <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain.svg" alt="css" width="20" height="20">  HTML 5 </br>
  
 # Installation Guide
  
