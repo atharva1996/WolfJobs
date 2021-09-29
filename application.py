@@ -310,6 +310,17 @@ def selectApplicant():
                          '$set': {"selected": applicant_id}})
     return redirect(url_for('dashboard'))
 
+@app.route("/jobsApplied", methods=['GET','POST'])
+def jobsApplied():
+    email = session['email']
+    cursor = mongo.db.jobs.find({'Appliers':{'$in':[email]}})
+
+    get_all_jobs = []
+    for record in cursor:
+        get_all_jobs.append(record)
+    return render_template('jobs_applied.html',jobs = get_all_jobs)
+
+
 
 @app.route("/dummy", methods=['GET'])
 def dummy():
