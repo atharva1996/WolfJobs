@@ -249,12 +249,13 @@ def selectApplicant():
 
 @app.route("/dummy", methods=['GET'])
 def dummy():
-    response = make_response(
+    """response = make_response(
                 redirect(url_for('home'),200),
             )
     response.headers["Content-Type"] = "application/json",
     response.headers["token"] = "123456"
-    return response
+    return response"""
+    return render_template('dummy.html')
 
 
 if __name__ == '__main__':

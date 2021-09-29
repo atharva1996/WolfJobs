@@ -26,10 +26,17 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarToggle">
+            {% if not session.get("email"): %}
             <div class="navbar-nav mr-auto">
-              <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+              <a class="nav-item nav-link" href="{{ url_for('login') }}">Home</a>
               <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
             </div>
+            {% else %}
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+              <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
+            </div>
+            {% endif %}
             <!-- Navbar Right Side -->
             {% if not session.get("email"): %}
             <div class="navbar-nav">
