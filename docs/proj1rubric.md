@@ -12,8 +12,7 @@ Prepare a  markdown  with **three** columns:
 
 | Notes|self-assessment|evidence|
 |-----|-|---------|
-|workload is spread over the whole team (one team member is often Xtimes more productive than the others... 
-but nevertheless, here is a track record that everyone is contributing a lot)|2|evidence  in GH|
+|workload is spread over the whole team (one team member is often Xtimes more productive than the others but nevertheless, here is a track record that everyone is contributing a lot)|2|evidence  in GH|
 | Number of commits|3|in GH|
 | Number of commits: by different people|1|in GH|
 | Issues reports: there are **many**|2|
