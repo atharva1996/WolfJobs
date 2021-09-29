@@ -5,7 +5,15 @@
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 ***
 # WolfJobs
-Sometimes, it could happen that a student who has an on-campus job fails to attend it because of some emergency or urgent requirement, then in such situations, we might need extra hands to compensate for the loss of one worker. Thus, to get help on such short notice, we intend to design a temporary job portal where students can view several temporary job postings and voluntarily offer to work on them.
+Need a side Hustle or want to get some quick rewards? Wolfjobs provides the perfect platform to meet your requirements.
 
-WOLFJOBS is an easy and convenient search application for students to find their temporary jobs and for the recruiters to find the right candidate in an urgent situation. Job seekers can register with the application and update their details and skill set.  Students can search for available jobs and apply for them accordingly. The manager will then pick the best candidate by checking the eligibility criteria. 
+A temporary job portal which provides Recruiters a mean to post temporary job openings and Candidates to apply for the jobs without being concerned about permanent associations. 
 
+# Why WolfJobs?
+Unlike the Job Portals that display only Permanent job positions, WolfJob focuses on providing Temporary positions to anyone who wants to work for a limited period of time.
+
+Be it a short-time Technical requirement or hiring a short-term Cashier for a dining place, WolfJobs covers it all! 
+Every user associated with WolfJobs has a choice to Post a job or Apply for a job. WolfJobs provides a universal account for a specific user so that He/She can manage the applications as well as job postings efficiently!
+
+Let's say that a Teaching Assistant is going on a vacation and needs a pair of hands to grade a particular exam having many students. He/She can post a requirement in WolfJobs stating the pay/rewards for the job. 
+Let's assume the same Teaching Assistant has some free time and want to know if there are any temporary requirements for grading any other course. Thus, He/She can search the jobs in WolfJobs and apply for the same. 
