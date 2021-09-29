@@ -212,7 +212,7 @@ def dashboard():
             else:
                 return render_template('dashboard.html', jobs=get_jobs)
     else:
-        cursor = mongo.db.jobs.find()
+        cursor = mongo.db.jobs.find({'email':{'$ne':email}})
         get_jobs = []
         for record in cursor:
             get_jobs.append(record)
@@ -318,7 +318,10 @@ def jobsApplied():
     get_all_jobs = []
     for record in cursor:
         get_all_jobs.append(record)
-    return render_template('jobs_applied.html',jobs = get_all_jobs)
+    if get_all_jobs==[]:
+        return render_template('jobs_applied.html',status = False)
+    else:
+        return render_template('jobs_applied.html',jobs = get_all_jobs,status = True)
 
 
 

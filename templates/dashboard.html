@@ -8,7 +8,7 @@
                     {% if jobs == None %}
                         <article class="media content-section">
                             <div class="media-body">
-                                <h2><a class="article-title" href="#">You have not posted any jobs!</a></h2>
+                                <h2>You have not posted any jobs!</h2>
                             </div>
                         </article>
                     {% else %}
@@ -24,6 +24,7 @@
                                             <hr>
                                             <p class="card-content">{{ job.job_description }}</p>
                                             <p class="card-content"><b>Location:</b> {{ job.job_location }}</p>
+                                            <p class="card-content"><b>Designation:</b> {{ job.designation }}</p>
                                         </div>
                                         <div class="card back">
                                             <p class="card-content" style="text-align:left; font-size:30px; margin-top:10px;">{{ job.job_title }}</a>
@@ -80,6 +81,7 @@
                                                 <hr>
                                                 <p class="card-content">{{ job.job_description }}</p>
                                                 <p class="card-content"><b>Location:</b> {{ job.job_location }}</p>
+                                                <p class="card-content"><b>Designation:</b> {{ job.designation }}</p>
                                             </div>
                                             <div class="card back">
                                                 <p class="card-content" style="text-align:left; font-size:30px; margin-top:10px;">{{ job.job_title }}</a>

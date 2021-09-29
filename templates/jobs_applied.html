@@ -1,24 +1,29 @@
 {% extends "layout.html" %}
 {% block content %}
-    <div class="container">
-        <div class="col-10">
-            {% for job in jobs %}
-                <article class="media content-section">
-                    <div class="media-body">
-                        <div class="article-metadata">
-                        <small class="text-muted">{{ job.time_posted }}</small>
+    {% if not status: %}
+        <h2>You Haven't Applied to any jobs yet!</h2>
+    {% else %}
+        <div class="container">
+            <div class="col-10">
+                {% for job in jobs %}
+                    <article class="media content-section">
+                        <div class="media-body">
+                            <div class="article-metadata">
+                            <small class="text-muted">{{ job.time_posted }}</small>
+                            </div>
+                            <h2><a class="article-title">{{ job.job_title }}</a></h2>
+                            <p class="article-content">{{ job.job_description }}</p>
+                            <p class="article-content"><b>Location:</b> {{ job.job_location }}</p>
+                            <p class="article-content">{{ job.skills }}</p>
+                            <p class="article-content">Schedule: {{ job.schedule }} hours</p>
+                            <p class="article-content">Salary: {{ job.salary }}</p>
+                            <p class="article-content">Rewards: {{ job.rewards }}</p>
                         </div>
-                        <h2><a class="article-title">{{ job.job_title }}</a></h2>
-                        <p class="article-content">{{ job.job_description }}</p>
-                        <p class="article-content"><b>Location:</b> {{ job.job_location }}</p>
-                        <p class="article-content">{{ job.skills }}</p>
-                        <p class="article-content">Schedule: {{ job.schedule }} hours</p>
-                        <p class="article-content">Salary: {{ job.salary }}</p>
-                        <p class="article-content">Rewards: {{ job.rewards }}</p>
-                    </div>
-                </article>
-            {% endfor %}
-            <button type="button" class="btn" style="max-width:100px; margin:5px;"><a style="color:green" href="{{url_for('dashboard')}}">Back</a></button>
+                    </article>
+                {% endfor %}
+            </div>
         </div>
-    </div>
+    {% endif %}
+    <br><br>
+    <button type="button" class="btn" style="max-width:100px; margin:5px;"><a style="color:green" href="{{url_for('dashboard')}}">Back</a></button>
 {% endblock content %}
