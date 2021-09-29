@@ -2,7 +2,7 @@
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 [![Build Status](https://app.travis-ci.com/atharva1996/WolfJobs.svg?branch=master)](https://app.travis-ci.com/atharva1996/WolfJobs)
-![pylint](https://NAMESPACE.gitlab.io/pyling.svg)
+[![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
 ***
 # WolfJobs
 Sometimes, it could happen that a student who has an on-campus job fails to attend it because of some emergency or urgent requirement, then in such situations, we might need extra hands to compensate for the loss of one worker. Thus, to get help on such short notice, we intend to design a temporary job portal where students can view several temporary job postings and voluntarily offer to work on them.
