@@ -21,10 +21,12 @@
     <header class="site-header">
       <nav class="navbar navbar-expand-md fixed-top nav-color">
         <div class="container">
-          <a class="navbar-brand mr-4 text-white" href="/">WolfJobs</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+         {% if not session.get("email") %}
+            <a class="navbar-brand mr-4 text-white" href="{{url_for('login')}}">WolfJobs</a>
+          {% else %}
+            <a class="navbar-brand mr-4 text-white" href="{{url_for('dashboard')}}">WolfJobs</a>
+          {% endif %}
+
           <div class="collapse navbar-collapse" id="navbarToggle">
             {% if not session.get("email"): %}
             <div class="navbar-nav mr-auto">
