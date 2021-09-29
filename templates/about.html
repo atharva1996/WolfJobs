@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;">
+{% extends "layout.html" %}
+{% block content %}
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -7,7 +8,7 @@
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
     <title>Home</title>
-    <link rel="stylesheet" href="../static/nicepage.css" media="screen">
+    <!-- <link rel="stylesheet" href="style/nicepage.css" media="screen"> -->
 <link rel="stylesheet" href="../static/Home.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
@@ -34,7 +35,7 @@
                   <div class="u-align-center-sm u-align-center-xs u-container-style u-layout-cell u-size-30-sm u-size-30-xs u-size-31-lg u-size-33-xl u-size-60-md u-white u-layout-cell-2">
                     <div class="u-container-layout u-valign-middle u-container-layout-2">
                       <h2 class="u-custom-font u-font-playfair-display u-text u-text-2">About Us</h2>
-                      <p class="u-text u-text-3"> Wolfjobs focuses on making the temporary job posting and
+                      <p class="u-text u-text-3"> WolfJobs focuses on making the temporary job posting and
       applying process simple for you, so that you can stay focused on finding the
       right job or the right candidate for the job. Our easy-to-use online temporary
       job portal give you 24/7 access to various job postings and opportunities that
@@ -49,7 +50,7 @@
       self-serve platform in order to proceed ahead with your job postings.&nbsp; &nbsp;&nbsp;
                         <br><b>2. Apply for a Job</b> – We help in finding right job
       for you
-      We believe&nbsp;<br>that a job search experience must
+      We believe&nbsp;that a job search experience must
       be as human and personal as the employee is. Hence wolfjobs goes beyond just a
       simple keyword search.&nbsp;&nbsp;&nbsp; &nbsp;
                       </p>
@@ -59,4 +60,4 @@
               </div>
             </div>
           </section>
-</html>
+{% endblock content %}
