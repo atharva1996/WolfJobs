@@ -1,4 +1,8 @@
-flask
-flask_mail
+bson
+flask_wtf
 bcrypt
 flask_pymongo
+flask_mail
+email_validator
+jwt
+flask_login
