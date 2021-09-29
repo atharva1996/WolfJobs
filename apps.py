@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_pymongo import PyMongo
 from flask_mail import Mail
+
+
 class App:
     def __init__(self):
         self.app = Flask(__name__)
