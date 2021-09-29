@@ -3,7 +3,8 @@
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 [![Build Status](https://app.travis-ci.com/atharva1996/WolfJobs.svg?branch=master)](https://app.travis-ci.com/atharva1996/WolfJobs)
 [![PEP8](https://img.shields.io/badge/code%20style-pep8-orange.svg)](https://www.python.org/dev/peps/pep-0008/)
-***
+![Issues](https://img.shields.io/github/issues/atharva1996/wolfjobs)
+
 # WolfJobs
 Need a side Hustle or want to get some quick rewards? Wolfjobs provides the perfect platform to meet your requirements.
 
