@@ -20,3 +20,59 @@ Every user associated with WolfJobs has a choice to Post a job or Apply for a jo
 
 Let's say that a Teaching Assistant is going on a vacation and needs a pair of hands to grade a particular exam having many students. He/She can post a requirement in WolfJobs stating the pay/rewards for the job. 
 Let's assume the same Teaching Assistant has some free time and want to know if there are any temporary requirements for grading any other course. Thus, He/She can search the jobs in WolfJobs and apply for the same. 
+
+# Tech Stack used for the development of this project
+
+ <a href="https://www.mongodb.com" target="_blank"> 
+   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg" alt="mongo" width="30" height="30"/>
+ </a>
+  <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML" target="_blank"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain.svg" alt="js" width="30" height="30"/>
+ </a>
+ <a href="https://www.python.org" target="_blank"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-plain.svg" alt="python" width="30" height="30"/>
+ </a>
+ <a href="https://developer.mozilla.org/en-US/docs/Glossary/CSS" target="_blank"> 
+    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg" alt="css" width="30" height="30"/>
+ </a>
+ 
+  * MongoDB
+  * HTML
+  * Python
+  * CSS
+ 
+# Installation Guide
+ 
+ Step 1: 
+  Git Clone the Repository 
+  
+    git clone https://github.com/atharva1996/WolfJobs.git 
+    
+  (OR) Download the .zip file on your local machine
+  
+    https://github.com/atharva1996/WolfJobs.git
+  
+ Step 2:
+   Install the required packages by running the following command in the terminal 
+   
+    pip install -r requirements.txt
+    
+ Step 3:
+    Run the following command in the terminal
+    
+    python application.py
+    
+ Step 4:
+    Open the URL in your browser:  
+      http://127.0.0.1:5000/
+      
+# Contributors
+  <table>
+  <tr>
+    <td align="center"><a href="https://github.com/atharva1996"><img src="https://avatars.githubusercontent.com/u/16671348?v=4" width="100px;" alt=""/><br /><sub><b>Atharva Patil</b></sub></a></td>
+    <td align="center"><a href="https://github.com/AtharvaJ10"><img src="https://avatars.githubusercontent.com/u/49825649?v=4" width="100px;" alt=""/><br /><sub><b>Atharva Joshi</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/Banpreet13"><img src="https://avatars.githubusercontent.com/u/78414515?v=4" width="100px;" alt=""/><br /><sub><b>Banpreet Singh</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/vaish68"><img src="https://avatars.githubusercontent.com/u/89509351?v=4" width="100px;" alt=""/><br /><sub><b>Vaishnavi Patil</b></sub></a><br /></td>
+    <td align="center"><a href="https://github.com/shivam-pednekar"><img src="https://avatars.githubusercontent.com/u/62328699?v=4" width="100px;" alt=""/><br /><sub><b>Shivam Pednekar</b></sub></a><br /></td>
+  </tr>
+</table>
