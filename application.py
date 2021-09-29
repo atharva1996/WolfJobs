@@ -212,7 +212,7 @@ def dashboard():
             else:
                 return render_template('dashboard.html', jobs=get_jobs)
     else:
-        cursor = mongo.db.jobs.find({'email':{'$ne':email}})
+        cursor = mongo.db.jobs.find({'email': {'$ne': email}})
         get_jobs = []
         for record in cursor:
             get_jobs.append(record)
@@ -310,19 +310,20 @@ def selectApplicant():
                          '$set': {"selected": applicant_id}})
     return redirect(url_for('dashboard'))
 
-@app.route("/jobsApplied", methods=['GET','POST'])
+
+@app.route("/jobsApplied", methods=['GET', 'POST'])
 def jobsApplied():
     email = session['email']
-    cursor = mongo.db.jobs.find({'Appliers':{'$in':[email]}})
+    cursor = mongo.db.jobs.find({'Appliers': {'$in': [email]}})
 
     get_all_jobs = []
     for record in cursor:
         get_all_jobs.append(record)
-    if get_all_jobs==[]:
-        return render_template('jobs_applied.html',status = False)
+    if get_all_jobs == []:
+        return render_template('jobs_applied.html', status=False)
     else:
-        return render_template('jobs_applied.html',jobs = get_all_jobs,status = True)
-
+        return render_template('jobs_applied.html',
+                               jobs=get_all_jobs, status=True)
 
 
 @app.route("/dummy", methods=['GET'])
