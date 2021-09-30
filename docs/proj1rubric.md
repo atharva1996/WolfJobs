@@ -41,8 +41,9 @@ Prepare a  markdown  with **three** columns:
 | evidence that the members of the team are working across multiple places in the code base||
 |short release cycles || (hard to see in short projects) project members are committing often enough so that everyone can get your work|
 
-# Project 1 Survey Questions
-
+# Project 1 Survey
+| Questions|||
+|-----|-|---------|
 | Question 1.1: Does your website and documentation provide a clear, high-level overview of your software? |  |  |
 | Question 1.2: Does your website and documentation clearly describe the type of user who should use your software? |  |  |
 | Question 1.3: Do you publish case studies to show how your software has been used by yourself and others? |  |  |
