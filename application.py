@@ -25,6 +25,12 @@ mail = app_object.mail
 @app.route("/")
 @app.route("/home")
 def home():
+############################ 
+# home() function displays the homepage of our website.
+# route "/home" will redirect to home() function. 
+# input: The function takes session as the input 
+# Output: Out function will redirect to the login page
+# ########################## 
     if session.get('email'):
         return render_template('home.html')
     else:
@@ -33,11 +39,22 @@ def home():
 
 @app.route("/about")
 def about():
+# ############################ 
+# about() function displays About Us page (about.html) template
+# route "/about" will redirect to home() function. 
+# ########################## 
     return render_template('about.html', title='About')
 
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
+# ############################ 
+# register() function displays the Registration portal (register.html) template
+# route "/register" will redirect to register() function.
+# RegistrationForm() called and if the form is submitted then various values are fetched and updated into database
+# Input: Username, Email, Password, Confirm Password
+# Output: Value update in database and redirected to home login page
+# ########################## 
     if not session.get('email'):
         form = RegistrationForm()
         if form.validate_on_submit():
@@ -56,6 +73,13 @@ def register():
 
 @app.route("/login", methods=['GET', 'POST'])
 def login():
+# ############################ 
+# login() function displays the Login form (login.html) template
+# route "/login" will redirect to login() function.
+# LoginForm() called and if the form is submitted then various values are fetched and verified from the database entries
+# Input: Email, Password, Login Type 
+# Output: Account Authentication and redirecting to Dashboard
+# ########################## 
     if not session.get('email'):
         form = LoginForm()
         if form.validate_on_submit():
@@ -84,12 +108,25 @@ def login():
 
 @app.route("/logout", methods=['GET', 'POST'])
 def logout():
+# ############################ 
+# logout() function just clears out the session and returns success
+# route "/logout" will redirect to logout() function.
+# Output: session clear 
+# ########################## 
     session.clear()
     return "success"
 
 
 @app.route("/forgotpassword", methods=['POST', 'GET'])
 def forgotPassword():
+# ############################ 
+# forgotpassword() function displays the Forgot Password form (forgotpassword.html) template
+# route "/forgotpassword" will redirect to forgotpassword() function.
+# ForgotPasswordForm() called and if the form is submitted then email is fetched and verified from the database entries
+# if authenticated then a mail with new pasword is sent
+# Input: Email
+# Output: Account Authentication, Email sent to user and redirecting to Login Page
+# ########################## 
     if not session.get('email'):
         form = ForgotPasswordForm()
         if form.validate_on_submit():
@@ -116,6 +153,13 @@ def forgotPassword():
 
 @app.route("/posting", methods=['GET', 'POST'])
 def posting():
+# ############################ 
+# posting() function displays Job Posting form (job_post.html) template
+# route "/posting" will redirect to posting() function.
+# PostingForm() called and if the form is submitted then various input values are updated into database
+# Input: Job Designation, Job Title, Job Location, Job Description, Skills required, Schedule of the job, Salary, Rewards
+# Output: values updated in database and page redirected to dashboard 
+# ########################## 
     if session.get('email') is not None and session.get(
             'email') and session.get('login_type') == 'Manager':
         form = PostingForm()
@@ -156,6 +200,13 @@ def posting():
 
 @app.route("/applying", methods=['GET', 'POST'])
 def applying():
+# ############################ 
+# applying() function displays Job application form (apply.html) template
+# route "/applying" will redirect to applying() function.
+# ApplyForm() called and if the form is submitted then various input values are updated into database
+# Input: Name, Phone No., Address, date of birth, skills, Availability, schedule, Signature 
+# Output: Values updated in database and page redirected to dashboard 
+# ########################## 
     if session.get('email') is not None and session.get(
             'email') and session.get('login_type') == 'Applicant':
         form = ApplyForm()
@@ -191,6 +242,13 @@ def applying():
 
 @app.route("/dashboard", methods=['GET', 'POST'])
 def dashboard():
+# ############################ 
+# dashboard() function displays the main page of our website (dashboard.html) template. It shows jobs posted and available and applied jobs.
+# route "/dashboard" will redirect to dashboard() function.
+# Various details of postings and jobs are fetched from database and displayed
+# Input: Login type, Email
+# Output: various details of postings and jobs
+# ########################## 
     login_type = session["login_type"]
     email = session['email']
 
@@ -243,6 +301,13 @@ def jobDetails():
 
 @app.route("/jobDetails", methods=['GET', 'POST'])
 def jobDetails():
+# ############################ 
+# jobDetails() function displays the main page of our website (job_details.html) template. It shows jobs posted and available and applied jobs.
+# route "/jobDetails" will redirect to jobDetails() function.
+# ApplyForm() called and if the form is submitted then various input values are updated into database
+# Input: Login type, Email, job_id
+# Output: If applicant - job_details.html is displayed and if manager then all applicants data is displayed along with job details
+# ########################## 
     form = ApplyForm()
     email = session['email']
     login_type = session["login_type"]
@@ -296,6 +361,12 @@ def jobDetails():
 
 @app.route("/deleteJob", methods=['GET', 'POST'])
 def deleteJob():
+# ############################ 
+# deleteJob() function just clears out a particular job with job_id from the databse and returns back to dashboard
+# route "/deleteJob" will redirect to deleteJob() function.
+# Input: job_id
+# Output: particular job with job_id removed and page redirected to dashboard
+# ########################## 
     job_id = request.args.get("job_id")
     id = mongo.db.jobs.remove({'_id': ObjectId(job_id)})
     return redirect(url_for('dashboard'))
@@ -303,6 +374,13 @@ def deleteJob():
 
 @app.route("/selectApplicant", methods=['GET', 'POST'])
 def selectApplicant():
+# ############################ 
+# selectApplicant() function performs the functionality of seleting an applicant for a particular job.
+# route "/selectApplicant" will redirect to selectApplicant() function.
+# Input value are taken and corresponding to those values set attribute is update to selected in database
+# Input: job_id, applicant_id
+# Output: Applicant is selected (database updated) and page redirected to dashboard
+# ########################## 
     job_id = request.args.get("job_id")
     applicant_id = request.args.get("applicant_id")
     print(job_id, applicant_id)
@@ -313,6 +391,12 @@ def selectApplicant():
 
 @app.route("/jobsApplied", methods=['GET', 'POST'])
 def jobsApplied():
+# ############################ 
+# jobsApplied() function performs the functionality displaying number of jobs an applicant applied to
+# route "/jobsApplied" will redirect to jobsApplied() function.
+# Input: email and Appliers
+# Output: Display of Number of jobs an applicant applied to.
+# ########################## 
     email = session['email']
     cursor = mongo.db.jobs.find({'Appliers': {'$in': [email]}})
 
@@ -328,6 +412,11 @@ def jobsApplied():
 
 @app.route("/dummy", methods=['GET'])
 def dummy():
+# ############################ 
+# dummy() function performs the functionality displaying the message "feature will be added soon"
+# route "/dummy" will redirect to dummy() function.
+# Output: redirects to dummy.html
+# ########################## 
     """response = make_response(
                 redirect(url_for('home'),200),
             )
