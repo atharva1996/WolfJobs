@@ -42,6 +42,33 @@ https://user-images.githubusercontent.com/89509351/135365891-5ca0f26e-0acc-48ab-
 ### Login
 <img width="1200"  src="https://user-images.githubusercontent.com/89509351/135366540-52e385fe-6aac-4bf5-a146-6b3302fc1124.png">
 
+### Manager's posts for job openings
+<img width="1200"  src="https://user-images.githubusercontent.com/89509351/135366665-93663827-a0d7-43c3-baea-c2923197b91e.png">
+
+### Manager dashboard
+
+<img width="1200"  src="https://user-images.githubusercontent.com/89509351/135366752-fa9230c3-5377-4b1f-b413-d84e21784007.png">
+
+### Student dashboard
+
+<img width="1200"  src="https://user-images.githubusercontent.com/89509351/135366827-db8185f6-38c1-4942-b6f7-56a9bb63c345.png">
+     
+### Student Application form
+
+<img width="1200"  src="https://user-images.githubusercontent.com/89509351/135366907-8682f8d9-d8e2-4138-aa53-9f11660f333a.png">
+
+### Check for jobs applied
+
+<img width="1200"  src="https://user-images.githubusercontent.com/89509351/135367040-26503123-8a21-465e-ad5d-818f8682ac68.png">
+     
+### Manager's dashboard to select the right candidate
+
+<img width="1200"  src="https://user-images.githubusercontent.com/89509351/135367153-63917738-9c09-4703-81dd-bcf49d86d973.png">
+
+
+
+
+
 
 
 
