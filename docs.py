@@ -1,11 +1,11 @@
 """WolfJobs.
 
 Usage:
-  application.py: Contains all the routes within the application
-  apps.py: Initializes the application and mongo instance
-  forms.py: Contains the model for all the forms used in the application
-  utilities.py: Conatins a helper function to send a mail to the user's registered email address incase of password being forgotton
-  
+  docs.py  [(<name1>|<name2>)] <name3>...
+  docs.py  mov <name1> <name2>
+  docs.py  (--h|--q) [<name1> -l]
+  docs.py  --version
+
 Options:
   -h --help            Show this screen.
   --version            Show version.
