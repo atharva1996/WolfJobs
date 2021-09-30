@@ -22,7 +22,8 @@ Let's say that a Teaching Assistant is going on a vacation and needs a pair of h
 Let's assume the same Teaching Assistant has some free time and want to know if there are any temporary requirements for grading any other course. Thus, He/She can search the jobs in WolfJobs and apply for the same. 
 
 
-#Watch this video to know more:
+
+# Watch this video to know more:
 
 https://user-images.githubusercontent.com/89509351/135365891-5ca0f26e-0acc-48ab-ad09-2c6dfcd7650f.mp4
 
@@ -33,6 +34,18 @@ https://user-images.githubusercontent.com/89509351/135365891-5ca0f26e-0acc-48ab-
  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg" alt="html" width="20" height="20"> CSS3 </br>
  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-plain.svg" alt="css" width="20" height="20">  HTML 5 </br>
  
+
+# Application Preview:
+### Registration Page
+<img width="1200"  src="https://user-images.githubusercontent.com/89509351/135366312-c886440a-11a2-43c7-bf89-0235c28c44a3.png">
+
+### Login
+<img width="1200"  src="https://user-images.githubusercontent.com/89509351/135366540-52e385fe-6aac-4bf5-a146-6b3302fc1124.png">
+
+
+
+
+
 # Installation Guide
  
  Step 1: 
