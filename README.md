@@ -21,6 +21,11 @@ Every user associated with WolfJobs has a choice to Post a job or Apply for a jo
 Let's say that a Teaching Assistant is going on a vacation and needs a pair of hands to grade a particular exam having many students. He/She can post a requirement in WolfJobs stating the pay/rewards for the job. 
 Let's assume the same Teaching Assistant has some free time and want to know if there are any temporary requirements for grading any other course. Thus, He/She can search the jobs in WolfJobs and apply for the same. 
 
+
+#Watch this video to know more:
+
+https://user-images.githubusercontent.com/89509351/135365891-5ca0f26e-0acc-48ab-ad09-2c6dfcd7650f.mp4
+
 # Tech Stack used for the development of this project
  
  <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="python" width="20" height="20"/> Python </br>
