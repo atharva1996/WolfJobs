@@ -23,6 +23,7 @@ Let's assume the same Teaching Assistant has some free time and want to know if 
 
 
 
+
 # Watch this video to know more:
 
 https://user-images.githubusercontent.com/89509351/135365891-5ca0f26e-0acc-48ab-ad09-2c6dfcd7650f.mp4
@@ -51,7 +52,7 @@ https://user-images.githubusercontent.com/89509351/135365891-5ca0f26e-0acc-48ab-
 
 ### Student dashboard
 
-<img width="1200"  src="https://user-images.githubusercontent.com/89509351/135366827-db8185f6-38c1-4942-b6f7-56a9bb63c345.png">
+<img width="1200"  src="https://user-images.githubusercontent.com/62328699/135398595-db44e897-0835-4532-ac29-aabd414b917a.png">
      
 ### Student Application form
 
