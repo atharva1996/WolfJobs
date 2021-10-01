@@ -42,8 +42,8 @@ Prepare a  markdown  with **three** columns:
 |short release cycles || (hard to see in short projects) project members are committing often enough so that everyone can get your work|
 
 # Project 1 Survey
-| Questions|||
-|-----|-|---------|
+| Questions|Responses|
+|-----|-|
 | Question 1.1: Does your website and documentation provide a clear, high-level overview of your software? | Yes |
 | Question 1.2: Does your website and documentation clearly describe the type of user who should use your software? |Yes|
 | Question 1.3: Do you publish case studies to show how your software has been used by yourself and others? | Yes  |
