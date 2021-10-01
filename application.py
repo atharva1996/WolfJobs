@@ -4,7 +4,8 @@ from bson.objectid import ObjectId
 
 from flask_wtf import form
 from utilities import Utilities
-from flask import app, render_template, session, url_for, flash, redirect, request, Response
+from flask import app, render_template, session, url_for, flash, redirect, request, Response, Flask
+from flask_pymongo import PyMongo
 from flask import json
 from flask.helpers import make_response
 from flask.json import jsonify
@@ -12,15 +13,21 @@ from flask_mail import Mail, Message
 import jwt
 from forms import ForgotPasswordForm, RegistrationForm, LoginForm, ResetPasswordForm, PostingForm, ApplyForm
 import bcrypt
-from apps import App
+#from apps import App
 from flask_login import LoginManager, login_required
 from bson.objectid import ObjectId
 
-app_object = App()
-app = app_object.app
-mongo = app_object.mongo
-mail = app_object.mail
+app = Flask(__name__)
+app.secret_key = 'secret'
+app.config['MONGO_URI'] = 'mongodb://localhost:27017/test'
+mongo = PyMongo(app)
 
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_USERNAME'] = "bogusdummy123@gmail.com"
+app.config['MAIL_PASSWORD'] = "helloworld123!"
+mail = Mail(app)
 
 @app.route("/")
 @app.route("/home")
