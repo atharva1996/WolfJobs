@@ -29,8 +29,8 @@ Prepare a  markdown  with **three** columns:
 | Use of syntax checkers. |3|evidence in GH |
 | Use of code coverage |0||
 | other automated analysis tools|0||
-| test cases exist|0||
-| test cases are routinely executed|1|e.g. travis-com.com or github actions or something|
+| test cases exist|3||
+| test cases are routinely executed|2|e.g. travis-com.com or github actions or something|
 | the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|evidence in GH
 | issues are discussed before they are closed|3|Comments are added before closing each issue|
 | Chat channel: exists|3|whatsapp and zoom
@@ -89,8 +89,8 @@ Prepare a  markdown  with **three** columns:
 | Question 11.8: Do you have tests that can be run after your software has been built or deployed to show whether the build or deployment has been successful? * |  No |
 | Question 12.1: Do you have an automated test suite for your software? * | No |
 | Question 12.2: Do you have a framework to periodically (e.g. nightly) run your tests on the latest version of the source code? * | No |
-| Question 12.3: Do you use continuous integration, automatically running tests whenever changes are made to your source code? * | No |
-| Question 12.4: Are your test results publicly visible? * | No |
+| Question 12.3: Do you use continuous integration, automatically running tests whenever changes are made to your source code? * | Yes |
+| Question 12.4: Are your test results publicly visible? * | Yes |
 | Question 12.5: Are all manually-run tests documented? * | Yes |
 | Question 13.1: Does your project have resources (e.g. blog, Twitter, RSS feed, Facebook page, wiki, mailing list) that are regularly updated with information about your software? * | No |
 | Question 13.2: Does your website state how many projects and users are associated with your project? * | Yes  |
@@ -111,6 +111,6 @@ Prepare a  markdown  with **three** columns:
 | Question 15.5: Is your software released under an OSI-approved open-source licence? * | No | 
 | Question 15.6: Does each of your source code files include a licence header? * | No | 
 | Question 15.7: Do you have a recommended citation for your software? * | No | 
-| Question 16.1: Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)? * |  No | 
+| Question 16.1: Does your website or documentation include a project roadmap (a list of project and development milestones for the next 3, 6 and 12 months)? * |  Yes | 
 | Question 16.2: Does your website or documentation describe how your project is funded, and the period over which funding is guaranteed? * | No |
 | Question 16.3: Do you make timely announcements of the deprecation of components, APIs, etc.? * | No | 
