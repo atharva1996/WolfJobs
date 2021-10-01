@@ -99,7 +99,33 @@ https://user-images.githubusercontent.com/89509351/135556679-daf6a3cd-39af-4cb6-
  Step 4:
     Open the URL in your browser:  
       http://127.0.0.1:5000/
-      
+
+# Future Scope
+  Searching for a new job and finding the right person for a job is no doubt a crucial task within itself. Hence adding further functionalities to our platform becomes very important task for better user experience.
+
+  The future scope of Wolf Job includes various functionalities as stated below defined in 2 phases
+
+  ### Phase 2:
+  1.	**Job Status** – In later stages Wolf Job will also show you the status of Jobs. If the job has been posted then it is in Open Stage, if the applicants have already applied for the job, then it is in In-Review stage, and once the job requirements are over then it is in Closed Stage.
+
+  2.	 **User Profile** – Wolf Job will also provide the functionality of updating whole user profile according to various need so that the Hiring Manager for a job can get more information about the applicant and can decide which applicant to hire seeing their profile.
+
+  3.	 **Resume Upload** – In Phase 2 of Wolf Job, user can even upload Resume / CV and cover letter for any particular job. Uploading resume will be very helpful for the hiring manager to get a better idea about an applicant’s background and profile.
+
+  4.	**Search Engine** – Wolf Job will also provide the user with the functionality of Job search engine. Basically, any end user can search for a particular job by typing keywords in the search box. Corresponding to the keywords entered, our platform will show various job uploaded on wolf Job platform.
+
+  ### Phase 3:
+  1.	**Job Analysis** – In phase 3, wolf Job will provide the functionality of analysing various aspects of a job. Job Analysis based on various parameters using graphical representation will help in making prediction on which jobs are more preferred and for which jobs applicants have more inclination. Hiring managers can then decide what rewards and salary to be given to the applicants of that job. Even applicants will get to know, which job is being preferred among other applicants.
+
+  2.	**OTP and Email Verification** – In the 3rd phase, wolf Job will provide the functionality to verify an end user by 2-way authentication, that is, Authentication via OTP as well as email verification.
+
+  3.	**Chatbot Integration** – Our platform Wolf Job will also provide the functionality of Chatbot integrated with our website so that user can easily interact with the bot and get to know about various features of our web application and have a nice interactive experience.
+
+  4.	**Interview Appointment Scheduling** – In future phase 3, Wolf Job will also provide the facility for the hiring manager to organize an interview appointment for the job based on applicant’s availability and convenient time uploaded by the hiring manager. Either of the users can upload their availability time in the G-sheet and using google calendar appointments can be organised.
+
+
+
+
 # Contributors
   <table>
   <tr>
