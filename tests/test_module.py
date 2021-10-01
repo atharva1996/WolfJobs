@@ -1,7 +1,4 @@
 import unittest
-
-from utilities import Utilities
-import utilities
 import application
 
 
