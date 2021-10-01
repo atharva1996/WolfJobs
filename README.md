@@ -10,7 +10,7 @@
 # WolfJobs
 Need a side Hustle or want to get some quick rewards? Wolfjobs provides the perfect platform to meet your requirements.
 
-A temporary job portal which provides Recruiters a mean to post temporary job openings and Candidates to apply for the jobs without being concerned about permanent associations. 
+A job portal which provides recruiters a platform to post temporary job openings and an oppurtunity for candidates to apply for the jobs without being concerned about permanent associations. 
 
 # Why WolfJobs?
 Unlike the Job Portals that display only Permanent job positions, WolfJob focuses on providing Temporary positions to anyone who wants to work for a limited period of time.
