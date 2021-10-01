@@ -52,16 +52,6 @@ class BasicTestCase(unittest.TestCase):
         ans =self.app.get('/applying')
         self.assertEqual(ans.status_code,302)
 
-
-    def test_deletejob(self):
-        self.app = application.app.test_client()
-        ans =self.app.get('/deleteJob')
-        self.assertEqual(ans.status_code,302)
-
-    def test_selectApplicant(self):
-        self.app = application.app.test_client()
-        ans =self.app.get('/selectApplicant')
-        self.assertEqual(ans.status_code,302)
     
     def test_jobsApplied(self):
         with application.app.test_client() as client:
