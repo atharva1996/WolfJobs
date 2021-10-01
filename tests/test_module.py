@@ -14,12 +14,6 @@ class BasicTestCase(unittest.TestCase):
         ans =self.app.get('/dummy')
         self.assertEqual(ans.status_code,200)
 
-
-    def test_randomstring(self):
-        utilities = Utilities()
-        ans = utilities.get_random_string(length=4)
-        self.assertIsNotNone(ans)
-
     
     def test_about(self):
         self.app = application.app.test_client()
