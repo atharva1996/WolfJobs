@@ -108,9 +108,9 @@ https://user-images.githubusercontent.com/89509351/135556679-daf6a3cd-39af-4cb6-
   ### Phase 2:
   1.	**Job Status** – In later stages Wolf Job will also show you the status of Jobs. If the job has been posted then it is in Open Stage, if the applicants have already applied for the job, then it is in In-Review stage, and once the job requirements are over then it is in Closed Stage.
 
-  2.	 **User Profile** – Wolf Job will also provide the functionality of updating whole user profile according to various need so that the Hiring Manager for a job can get more information about the applicant and can decide which applicant to hire seeing their profile.
+  2.	**User Profile** – Wolf Job will also provide the functionality of updating whole user profile according to various need so that the Hiring Manager for a job can get more information about the applicant and can decide which applicant to hire seeing their profile.
 
-  3.	 **Resume Upload** – In Phase 2 of Wolf Job, user can even upload Resume / CV and cover letter for any particular job. Uploading resume will be very helpful for the hiring manager to get a better idea about an applicant’s background and profile.
+  3.	**Resume Upload** – In Phase 2 of Wolf Job, user can even upload Resume / CV and cover letter for any particular job. Uploading resume will be very helpful for the hiring manager to get a better idea about an applicant’s background and profile.
 
   4.	**Search Engine** – Wolf Job will also provide the user with the functionality of Job search engine. Basically, any end user can search for a particular job by typing keywords in the search box. Corresponding to the keywords entered, our platform will show various job uploaded on wolf Job platform.
 
