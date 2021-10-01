@@ -30,7 +30,7 @@ Prepare a  markdown  with **three** columns:
 | Use of code coverage |0||
 | other automated analysis tools|0||
 | test cases exist|3||
-| test cases are routinely executed|2|e.g. travis-com.com or github actions or something|
+| test cases are routinely executed|3|e.g. travis-com.com or github actions or something|
 | the files CONTRIBUTING.md lists coding standards and lots of tips on how to extend the system without screwing things up|3|evidence in GH
 | issues are discussed before they are closed|3|Comments are added before closing each issue|
 | Chat channel: exists|3|whatsapp and zoom
